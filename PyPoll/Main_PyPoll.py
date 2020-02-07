@@ -23,7 +23,7 @@ with open(csvpath, newline='') as csvfile:
     candidate =[]
     candidate_unq = []
     candidate_info = {}
-    num = 0
+    
    
    # Calculating no. of votes by looping through csvreader
     for row in csvreader:
