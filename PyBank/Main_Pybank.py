@@ -11,7 +11,6 @@ csvpath = os.path.join('Resources', 'budget_data.csv')
 output_path = os.path.join("output", "PyBank.txt")
 
 # Reading using CSV module
-
 with open(csvpath, newline='') as csvfile:
 
    csvreader = csv.reader(csvfile, delimiter=',')
@@ -32,7 +31,7 @@ with open(csvpath, newline='') as csvfile:
       #appending profit/loss column values to profit_col
       profit_col.append(row[1])
       
-      # casting the profit/losses column as integers
+      #casting the profit/losses column as integers
       profit_col = [int(i) for i in profit_col]
 
 
@@ -43,6 +42,7 @@ with open(csvpath, newline='') as csvfile:
       elif (min(profit_col) == int(row[1])):
          date_min = row[0]
 
+   #intializng change total
    change_total = 0
    #finding the change 
    for i in range(len(profit_col) - 1):
